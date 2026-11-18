@@ -46,7 +46,18 @@ GrayEditor는 TXT, Markdown, JSON에 회색 문서 아이콘을 포함한다. �
 killall Finder
 ```
 
-Finder가 잠시 종료된 뒤 다시 실행된다. 이번 Mac에서는 이 방법으로 기존 초록색 아이콘이 회색으로 갱신되었다. 처음 설치하는 Mac이나 이미 아이콘이 갱신된 경우에는 실행할 필요가 없다. 재실행 후에도 초록색이면 해당 파일의 **정보 가져오기 > 다음으로 열기**에서 GrayEditor가 선택돼 있는지 확인한다. 다른 앱이 기본 앱인 파일이나 파일에 직접 지정한 사용자 아이콘은 별도로 표시될 수 있다.
+Finder가 잠시 종료된 뒤 다시 실행된다. 처음 설치하는 Mac이나 이미 아이콘이 갱신된 경우에는 실행할 필요가 없다. 재실행 후에도 초록색이면 해당 파일의 **정보 가져오기 > 다음으로 열기**에서 GrayEditor가 선택돼 있는지 확인한다.
+
+기존 CotEditor를 휴지통으로 옮긴 Mac에서는 macOS가 휴지통 안의 앱을 문서 타입 제공자로 계속 등록할 수 있다. 이 경우 특히 JSON의 초록색 아이콘 선언이 남을 수 있다. 휴지통에 `CotEditor.app`이 있을 때 다음 명령으로 오래된 등록을 해제하고 Finder를 갱신한다.
+
+```bash
+/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -u ~/.Trash/CotEditor.app
+killall Finder
+```
+
+이 Mac에서는 이 작업 직후 JSON 아이콘도 회색으로 보이기 시작했다. 앱 파일은 삭제하지 않았다. 휴지통의 앱이 나중에 다시 등록되어 초록색이 재발하면 해당 `CotEditor.app`을 휴지통에서 완전히 삭제한 뒤 다시 갱신한다.
+
+다른 앱이 기본 앱인 파일이나 파일에 직접 지정한 사용자 아이콘은 별도로 표시될 수 있다.
 
 ## 빌드 후 용량 정리
 
