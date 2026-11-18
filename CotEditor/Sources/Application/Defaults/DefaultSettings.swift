@@ -42,15 +42,17 @@ struct DefaultSettings {
             .checksUpdatesForBeta: false,
             
             // Appearance
-            .font: try? FontType.standard.systemFont().archivedData,
+            .font: try? NSFont(name: "AppleSDGothicNeo-Regular", size: 14.5)?.archivedData,
             .shouldAntialias: true,
             .ligature: true,
-            .monospacedFont: try? FontType.monospaced.systemFont().archivedData,
+            .monospacedFont: try? NSFont(name: "JetBrainsMono-Light", size: 14.5)?.archivedData,
             .monospacedShouldAntialias: true,
             .monospacedLigature: false,
             .lineHeight: 1.3,
             .documentAppearance: AppearanceMode.default.rawValue,
             .windowAlpha: 1.0,
+            .windowWidth: 1000,
+            .windowHeight: 800,
             .theme: "Anura",
             .pinsThemeAppearance: false,
             
@@ -103,7 +105,7 @@ struct DefaultSettings {
             .encoding: String.Encoding.utf8.rawValue,
             .saveUTF8BOM: false,
             .referToEncodingTag: true,
-            .syntax: "Plain Text",
+            .syntax: "Markdown",
             .hiddenSyntaxes: [],
             
             // Snippets
