@@ -1,0 +1,52 @@
+// swift-tools-version: 6.3
+
+import PackageDescription
+
+let package = Package(
+    name: "MacUI",
+    defaultLocalization: "en",
+    platforms: [
+        .macOS(.v26),
+    ],
+    products: [
+        .library(name: "MacUI", targets: [
+            "ControlUI",
+            "RegexHighlighting",
+            "Shortcut",
+        ]),
+        
+        .library(name: "RegexHighlighting", targets: ["RegexHighlighting"]),
+        .library(name: "Shortcut", targets: ["Shortcut"]),
+    ],
+    dependencies: [
+        .package(name: "EditorCore", path: "../EditorCore"),
+        .package(url: "https://github.com/SimplyDanny/SwiftLintPlugins", from: Version(0, 62, 0)),
+    ],
+    targets: [
+        .target(name: "ControlUI", dependencies: ["EditorCore"], resources: [.process("Assets.xcassets")], swiftSettings: [
+            .defaultIsolation(MainActor.self),
+        ]),
+        
+        .target(name: "RegexHighlighting", dependencies: ["EditorCore"]),
+        .testTarget(name: "RegexHighlightingTests", dependencies: ["RegexHighlighting"]),
+        
+        .target(name: "Shortcut", resources: [.process("Resources")]),
+        .testTarget(name: "ShortcutTests", dependencies: ["Shortcut"]),
+    ],
+    swiftLanguageModes: [.v6]
+)
+
+
+for target in package.targets {
+    target.plugins = (target.plugins ?? []) + [
+        .plugin(name: "SwiftLintBuildToolPlugin", package: "SwiftLintPlugins"),
+    ]
+    target.swiftSettings = (target.swiftSettings ?? []) + [
+        .strictMemorySafety(),
+        .enableUpcomingFeature("ExistentialAny"),
+        .enableUpcomingFeature("InternalImportsByDefault"),
+        .enableUpcomingFeature("MemberImportVisibility"),
+        .enableUpcomingFeature("NonisolatedNonsendingByDefault"),
+        .enableUpcomingFeature("InferIsolatedConformances"),
+    ]
+}
