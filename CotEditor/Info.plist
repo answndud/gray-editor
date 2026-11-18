@@ -7,6 +7,60 @@
 	<key>CFBundleDocumentTypes</key>
 	<array>
 		<dict>
+			<key>CFBundleTypeIconFile</key>
+			<string>GrayDocument-json</string>
+			<key>CFBundleTypeName</key>
+			<string>GrayEditor JSON document</string>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>LSHandlerRank</key>
+			<string>Default</string>
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>public.json</string>
+			</array>
+			<key>NSDocumentClass</key>
+			<string>$(PRODUCT_MODULE_NAME).Document</string>
+			<key>NSUbiquitousDocumentUserActivityType</key>
+			<string>$(PRODUCT_BUNDLE_IDENTIFIER).editing</string>
+		</dict>
+		<dict>
+			<key>CFBundleTypeIconFile</key>
+			<string>GrayDocument-md</string>
+			<key>CFBundleTypeName</key>
+			<string>GrayEditor MD document</string>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>LSHandlerRank</key>
+			<string>Default</string>
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>net.daringfireball.markdown</string>
+			</array>
+			<key>NSDocumentClass</key>
+			<string>$(PRODUCT_MODULE_NAME).Document</string>
+			<key>NSUbiquitousDocumentUserActivityType</key>
+			<string>$(PRODUCT_BUNDLE_IDENTIFIER).editing</string>
+		</dict>
+		<dict>
+			<key>CFBundleTypeIconFile</key>
+			<string>GrayDocument-txt</string>
+			<key>CFBundleTypeName</key>
+			<string>GrayEditor TXT document</string>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>LSHandlerRank</key>
+			<string>Default</string>
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>public.plain-text</string>
+			</array>
+			<key>NSDocumentClass</key>
+			<string>$(PRODUCT_MODULE_NAME).Document</string>
+			<key>NSUbiquitousDocumentUserActivityType</key>
+			<string>$(PRODUCT_BUNDLE_IDENTIFIER).editing</string>
+		</dict>
+		<dict>
 			<key>CFBundleTypeIconSystemGenerated</key>
 			<integer>0</integer>
 			<key>CFBundleTypeIconFile</key>
@@ -19,7 +73,6 @@
 			<string>Default</string>
 			<key>LSItemContentTypes</key>
 			<array>
-				<string>public.plain-text</string>
 				<string>public.text</string>
 				<string>public.data</string>
 				<string>public.c-header</string>
@@ -29,8 +82,6 @@
 				<string>public.css</string>
 				<string>public.fortran-source</string>
 				<string>public.html</string>
-				<string>public.json</string>
-				<string>net.daringfireball.markdown</string>
 				<string>public.patch-file</string>
 				<string>public.perl-script</string>
 				<string>public.php-script</string>
@@ -88,8 +139,8 @@
 			<string>$(PRODUCT_MODULE_NAME).DirectoryDocument</string>
 		</dict>
 		<dict>
-			<key>CFBundleTypeIconSystemGenerated</key>
-			<true/>
+			<key>CFBundleTypeIconFile</key>
+			<string>AppIcon</string>
 			<key>CFBundleTypeName</key>
 			<string>CotEditor Syntax</string>
 			<key>CFBundleTypeRole</key>
@@ -309,7 +360,7 @@
 			<key>UTTypeIcons</key>
 			<dict>
 				<key>UTTypeIconBackgroundName</key>
-				<string>CurlyBrackets-fill</string>
+				<string>GrayEditor-CurlyBrackets-fill</string>
 				<key>UTTypeIconText</key>
 				<string>config</string>
 			</dict>
@@ -333,7 +384,7 @@
 			<key>UTTypeIcons</key>
 			<dict>
 				<key>UTTypeIconBackgroundName</key>
-				<string>Gear-fill</string>
+				<string>GrayEditor-Gear-fill</string>
 				<key>UTTypeIconText</key>
 				<string>config</string>
 			</dict>
@@ -357,7 +408,7 @@
 			<key>UTTypeIcons</key>
 			<dict>
 				<key>UTTypeIconBackgroundName</key>
-				<string>Lambda-fill</string>
+				<string>GrayEditor-Lambda-fill</string>
 				<key>UTTypeIconText</key>
 				<string>lisp</string>
 			</dict>
@@ -382,7 +433,7 @@
 			<key>UTTypeIcons</key>
 			<dict>
 				<key>UTTypeIconBackgroundName</key>
-				<string>Mojo-fill</string>
+				<string>GrayEditor-Mojo-fill</string>
 				<key>UTTypeIconText</key>
 				<string>mojo</string>
 			</dict>
@@ -407,7 +458,7 @@
 			<key>UTTypeIcons</key>
 			<dict>
 				<key>UTTypeIconBackgroundName</key>
-				<string>Lambda-fill</string>
+				<string>GrayEditor-Lambda-fill</string>
 				<key>UTTypeIconText</key>
 				<string>scheme</string>
 			</dict>
@@ -432,7 +483,7 @@
 			<key>UTTypeIcons</key>
 			<dict>
 				<key>UTTypeIconBackgroundName</key>
-				<string>Circuit-fill</string>
+				<string>GrayEditor-Circuit-fill</string>
 				<key>UTTypeIconText</key>
 				<string>verilog</string>
 			</dict>
@@ -456,7 +507,7 @@
 			<key>UTTypeIcons</key>
 			<dict>
 				<key>UTTypeIconBackgroundName</key>
-				<string>Circuit-fill</string>
+				<string>GrayEditor-Circuit-fill</string>
 				<key>UTTypeIconText</key>
 				<string>VHDL</string>
 			</dict>
@@ -501,7 +552,7 @@
 			<key>UTTypeIcons</key>
 			<dict>
 				<key>UTTypeIconBackgroundName</key>
-				<string>CurlyBrackets-fill</string>
+				<string>GrayEditor-CurlyBrackets-fill</string>
 				<key>UTTypeIconText</key>
 				<string>h</string>
 			</dict>
@@ -525,7 +576,7 @@
 			<key>UTTypeIcons</key>
 			<dict>
 				<key>UTTypeIconBackgroundName</key>
-				<string>CurlyBrackets-fill</string>
+				<string>GrayEditor-CurlyBrackets-fill</string>
 				<key>UTTypeIconText</key>
 				<string>c</string>
 			</dict>
@@ -549,7 +600,7 @@
 			<key>UTTypeIcons</key>
 			<dict>
 				<key>UTTypeIconBackgroundName</key>
-				<string>CurlyBrackets-fill</string>
+				<string>GrayEditor-CurlyBrackets-fill</string>
 				<key>UTTypeIconText</key>
 				<string>h++</string>
 			</dict>
@@ -578,7 +629,7 @@
 			<key>UTTypeIcons</key>
 			<dict>
 				<key>UTTypeIconBackgroundName</key>
-				<string>CurlyBrackets-fill</string>
+				<string>GrayEditor-CurlyBrackets-fill</string>
 				<key>UTTypeIconText</key>
 				<string>c++</string>
 			</dict>
@@ -606,7 +657,7 @@
 			<key>UTTypeIcons</key>
 			<dict>
 				<key>UTTypeIconBackgroundName</key>
-				<string>Number-fill</string>
+				<string>GrayEditor-Number-fill</string>
 				<key>UTTypeIconText</key>
 				<string>CSS</string>
 			</dict>
@@ -634,7 +685,7 @@
 			<key>UTTypeIcons</key>
 			<dict>
 				<key>UTTypeIconBackgroundName</key>
-				<string>F-fill</string>
+				<string>GrayEditor-F-fill</string>
 				<key>UTTypeIconText</key>
 				<string>Fortran</string>
 			</dict>
@@ -663,7 +714,7 @@
 			<key>UTTypeIcons</key>
 			<dict>
 				<key>UTTypeIconBackgroundName</key>
-				<string>AngleBrackets-fill</string>
+				<string>GrayEditor-AngleBrackets-fill</string>
 				<key>UTTypeIconText</key>
 				<string>HTML</string>
 			</dict>
@@ -692,7 +743,7 @@
 			<key>UTTypeIcons</key>
 			<dict>
 				<key>UTTypeIconBackgroundName</key>
-				<string>CurlyBrackets-fill</string>
+				<string>GrayEditor-CurlyBrackets-fill</string>
 				<key>UTTypeIconText</key>
 				<string>JSON</string>
 			</dict>
@@ -720,7 +771,7 @@
 			<key>UTTypeIcons</key>
 			<dict>
 				<key>UTTypeIconBackgroundName</key>
-				<string>Markdown-fill</string>
+				<string>GrayEditor-Markdown-fill</string>
 				<key>UTTypeIconText</key>
 				<string>md</string>
 			</dict>
@@ -754,7 +805,7 @@
 			<key>UTTypeIcons</key>
 			<dict>
 				<key>UTTypeIconBackgroundName</key>
-				<string>Diff-fill</string>
+				<string>GrayEditor-Diff-fill</string>
 				<key>UTTypeIconText</key>
 				<string>diff</string>
 			</dict>
@@ -780,7 +831,7 @@
 			<key>UTTypeIcons</key>
 			<dict>
 				<key>UTTypeIconBackgroundName</key>
-				<string>Perl-fill</string>
+				<string>GrayEditor-Perl-fill</string>
 				<key>UTTypeIconText</key>
 				<string>Perl</string>
 			</dict>
@@ -805,7 +856,7 @@
 			<key>UTTypeIcons</key>
 			<dict>
 				<key>UTTypeIconBackgroundName</key>
-				<string>AngleBrackets-fill</string>
+				<string>GrayEditor-AngleBrackets-fill</string>
 				<key>UTTypeIconText</key>
 				<string>PHP</string>
 			</dict>
@@ -834,7 +885,7 @@
 			<key>UTTypeIcons</key>
 			<dict>
 				<key>UTTypeIconBackgroundName</key>
-				<string>Text-fill</string>
+				<string>GrayEditor-Text-fill</string>
 				<key>UTTypeIconText</key>
 				<string>text</string>
 			</dict>
@@ -862,7 +913,7 @@
 			<key>UTTypeIcons</key>
 			<dict>
 				<key>UTTypeIconBackgroundName</key>
-				<string>Python-fill</string>
+				<string>GrayEditor-Python-fill</string>
 				<key>UTTypeIconText</key>
 				<string>Python</string>
 			</dict>
@@ -887,7 +938,7 @@
 			<key>UTTypeIcons</key>
 			<dict>
 				<key>UTTypeIconBackgroundName</key>
-				<string>Ruby-fill</string>
+				<string>GrayEditor-Ruby-fill</string>
 				<key>UTTypeIconText</key>
 				<string>Ruby</string>
 			</dict>
@@ -911,7 +962,7 @@
 			<key>UTTypeIcons</key>
 			<dict>
 				<key>UTTypeIconBackgroundName</key>
-				<string>Shell-fill</string>
+				<string>GrayEditor-Shell-fill</string>
 				<key>UTTypeIconText</key>
 				<string>Shell</string>
 			</dict>
@@ -936,7 +987,7 @@
 			<key>UTTypeIcons</key>
 			<dict>
 				<key>UTTypeIconBackgroundName</key>
-				<string>SVG-fill</string>
+				<string>GrayEditor-SVG-fill</string>
 				<key>UTTypeIconText</key>
 				<string>SVG</string>
 			</dict>
@@ -964,7 +1015,7 @@
 			<key>UTTypeIcons</key>
 			<dict>
 				<key>UTTypeIconBackgroundName</key>
-				<string>Swift-fill</string>
+				<string>GrayEditor-Swift-fill</string>
 				<key>UTTypeIconText</key>
 				<string>Swift</string>
 			</dict>
@@ -988,7 +1039,7 @@
 			<key>UTTypeIcons</key>
 			<dict>
 				<key>UTTypeIconBackgroundName</key>
-				<string>TeX-fill</string>
+				<string>GrayEditor-TeX-fill</string>
 				<key>UTTypeIconText</key>
 				<string>TeX</string>
 			</dict>
@@ -1014,7 +1065,7 @@
 			<key>UTTypeIcons</key>
 			<dict>
 				<key>UTTypeIconBackgroundName</key>
-				<string>TOML-fill</string>
+				<string>GrayEditor-TOML-fill</string>
 				<key>UTTypeIconText</key>
 				<string>TOML</string>
 			</dict>
@@ -1044,7 +1095,7 @@
 			<key>UTTypeIcons</key>
 			<dict>
 				<key>UTTypeIconBackgroundName</key>
-				<string>AngleBrackets-fill</string>
+				<string>GrayEditor-AngleBrackets-fill</string>
 				<key>UTTypeIconText</key>
 				<string>XML</string>
 			</dict>
@@ -1076,7 +1127,7 @@
 			<key>UTTypeIcons</key>
 			<dict>
 				<key>UTTypeIconBackgroundName</key>
-				<string>Gear-fill</string>
+				<string>GrayEditor-Gear-fill</string>
 				<key>UTTypeIconText</key>
 				<string>YAML</string>
 			</dict>
@@ -1105,7 +1156,7 @@
 			<key>UTTypeIcons</key>
 			<dict>
 				<key>UTTypeIconBackgroundName</key>
-				<string>CurlyBrackets-fill</string>
+				<string>GrayEditor-CurlyBrackets-fill</string>
 				<key>UTTypeIconText</key>
 				<string>C#</string>
 			</dict>
@@ -1129,7 +1180,7 @@
 			<key>UTTypeIcons</key>
 			<dict>
 				<key>UTTypeIconBackgroundName</key>
-				<string>Gear-fill</string>
+				<string>GrayEditor-Gear-fill</string>
 				<key>UTTypeIconText</key>
 				<string>ini</string>
 			</dict>
@@ -1153,7 +1204,7 @@
 			<key>UTTypeIcons</key>
 			<dict>
 				<key>UTTypeIconBackgroundName</key>
-				<string>CurlyBrackets-fill</string>
+				<string>GrayEditor-CurlyBrackets-fill</string>
 				<key>UTTypeIconText</key>
 				<string>js</string>
 			</dict>
@@ -1177,7 +1228,7 @@
 			<key>UTTypeIcons</key>
 			<dict>
 				<key>UTTypeIconBackgroundName</key>
-				<string>CoffeeCup-fill</string>
+				<string>GrayEditor-CoffeeCup-fill</string>
 				<key>UTTypeIconText</key>
 				<string>Java</string>
 			</dict>
@@ -1202,7 +1253,7 @@
 			<key>UTTypeIcons</key>
 			<dict>
 				<key>UTTypeIconBackgroundName</key>
-				<string>Text-fill</string>
+				<string>GrayEditor-Text-fill</string>
 				<key>UTTypeIconText</key>
 				<string>textile</string>
 			</dict>
@@ -1226,7 +1277,7 @@
 			<key>UTTypeIcons</key>
 			<dict>
 				<key>UTTypeIconBackgroundName</key>
-				<string>Dart-fill</string>
+				<string>GrayEditor-Dart-fill</string>
 				<key>UTTypeIconText</key>
 				<string>Dart</string>
 			</dict>
@@ -1252,7 +1303,7 @@
 			<key>UTTypeIcons</key>
 			<dict>
 				<key>UTTypeIconBackgroundName</key>
-				<string>D-fill</string>
+				<string>GrayEditor-D-fill</string>
 				<key>UTTypeIconText</key>
 				<string>D</string>
 			</dict>
@@ -1278,7 +1329,7 @@
 			<key>UTTypeIcons</key>
 			<dict>
 				<key>UTTypeIconBackgroundName</key>
-				<string>Go-fill</string>
+				<string>GrayEditor-Go-fill</string>
 				<key>UTTypeIconText</key>
 				<string>Go</string>
 			</dict>
@@ -1304,7 +1355,7 @@
 			<key>UTTypeIcons</key>
 			<dict>
 				<key>UTTypeIconBackgroundName</key>
-				<string>Haskell-fill</string>
+				<string>GrayEditor-Haskell-fill</string>
 				<key>UTTypeIconText</key>
 				<string>Haskell</string>
 			</dict>
@@ -1331,7 +1382,7 @@
 			<key>UTTypeIcons</key>
 			<dict>
 				<key>UTTypeIconBackgroundName</key>
-				<string>SQL-fill</string>
+				<string>GrayEditor-SQL-fill</string>
 				<key>UTTypeIconText</key>
 				<string>SQL</string>
 			</dict>
@@ -1359,7 +1410,7 @@
 			<key>UTTypeIcons</key>
 			<dict>
 				<key>UTTypeIconBackgroundName</key>
-				<string>Julia-fill</string>
+				<string>GrayEditor-Julia-fill</string>
 				<key>UTTypeIconText</key>
 				<string>Julia</string>
 			</dict>
@@ -1385,7 +1436,7 @@
 			<key>UTTypeIcons</key>
 			<dict>
 				<key>UTTypeIconBackgroundName</key>
-				<string>Kotlin-fill</string>
+				<string>GrayEditor-Kotlin-fill</string>
 				<key>UTTypeIconText</key>
 				<string>Kotlin</string>
 			</dict>
@@ -1412,7 +1463,7 @@
 			<key>UTTypeIcons</key>
 			<dict>
 				<key>UTTypeIconBackgroundName</key>
-				<string>Lua-fill</string>
+				<string>GrayEditor-Lua-fill</string>
 				<key>UTTypeIconText</key>
 				<string>Lua</string>
 			</dict>
@@ -1438,7 +1489,7 @@
 			<key>UTTypeIcons</key>
 			<dict>
 				<key>UTTypeIconBackgroundName</key>
-				<string>Text-fill</string>
+				<string>GrayEditor-Text-fill</string>
 				<key>UTTypeIconText</key>
 				<string>reST</string>
 			</dict>
@@ -1465,7 +1516,7 @@
 			<key>UTTypeIcons</key>
 			<dict>
 				<key>UTTypeIconBackgroundName</key>
-				<string>Gear-fill</string>
+				<string>GrayEditor-Gear-fill</string>
 				<key>UTTypeIconText</key>
 				<string>Rust</string>
 			</dict>
@@ -1492,7 +1543,7 @@
 			<key>UTTypeIcons</key>
 			<dict>
 				<key>UTTypeIconBackgroundName</key>
-				<string>Scala-fill</string>
+				<string>GrayEditor-Scala-fill</string>
 				<key>UTTypeIconText</key>
 				<string>Scala</string>
 			</dict>
@@ -1518,7 +1569,7 @@
 			<key>UTTypeIcons</key>
 			<dict>
 				<key>UTTypeIconBackgroundName</key>
-				<string>TeX-fill</string>
+				<string>GrayEditor-TeX-fill</string>
 				<key>UTTypeIconText</key>
 				<string>TeX</string>
 			</dict>
